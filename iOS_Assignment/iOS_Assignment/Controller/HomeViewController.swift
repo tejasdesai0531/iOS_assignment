@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  iOS_Assignment
 //
 //  Created by Raghvendra rao on 09/12/19.
@@ -8,12 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
     
     var productDetails:ProductDetails?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func fetchProductDetails(_ sender: Any) {
         
         let url = URL(string: "https://stark-spire-93433.herokuapp.com/json")!
         
@@ -31,14 +34,17 @@ class ViewController: UIViewController {
                     }
                 }
                 
+                DispatchQueue.main.async {
+                    let listViewController = self.storyboard?.instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
+                    listViewController.productDetails = self.productDetails
+                    self.navigationController?.pushViewController(listViewController, animated: true)
+                }
+                
             } catch let error as NSError {
                 print("Failed to load: \(error.localizedDescription)")
             }
         }
+        
     }
     
-    
-
-
 }
-

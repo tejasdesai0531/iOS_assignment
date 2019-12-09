@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		3D20882D239E33BC00FFF882 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20882C239E33BC00FFF882 /* AppDelegate.swift */; };
-		3D20882F239E33BC00FFF882 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20882E239E33BC00FFF882 /* ViewController.swift */; };
 		3D208832239E33BC00FFF882 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D208830239E33BC00FFF882 /* Main.storyboard */; };
 		3D208834239E33C900FFF882 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D208833239E33C900FFF882 /* Assets.xcassets */; };
 		3D208837239E33C900FFF882 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D208835239E33C900FFF882 /* LaunchScreen.storyboard */; };
 		3D208843239E3B9F00FFF882 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D208842239E3B9F00FFF882 /* NetworkManager.swift */; };
 		3D208845239E3BCD00FFF882 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D208844239E3BCD00FFF882 /* APIHandler.swift */; };
 		3D208847239E474C00FFF882 /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D208846239E474C00FFF882 /* ProductDetails.swift */; };
+		3D208849239E5A8B00FFF882 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D208848239E5A8B00FFF882 /* HomeViewController.swift */; };
+		3D20884D239E5E4F00FFF882 /* ListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20884B239E5E4F00FFF882 /* ListViewCell.swift */; };
+		3D20884E239E5E4F00FFF882 /* ListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D20884C239E5E4F00FFF882 /* ListViewCell.xib */; };
+		3D208850239E5FBE00FFF882 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D20884F239E5FBE00FFF882 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D208829239E33BC00FFF882 /* iOS_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D20882C239E33BC00FFF882 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D20882E239E33BC00FFF882 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3D208831239E33BC00FFF882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D208833239E33C900FFF882 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D208836239E33C900FFF882 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +30,10 @@
 		3D208842239E3B9F00FFF882 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		3D208844239E3BCD00FFF882 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		3D208846239E474C00FFF882 /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
+		3D208848239E5A8B00FFF882 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3D20884B239E5E4F00FFF882 /* ListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewCell.swift; sourceTree = "<group>"; };
+		3D20884C239E5E4F00FFF882 /* ListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewCell.xib; sourceTree = "<group>"; };
+		3D20884F239E5FBE00FFF882 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		3D20883F239E3AA500FFF882 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3D20884A239E5E1500FFF882 /* Cells */,
 				3D208830239E33BC00FFF882 /* Main.storyboard */,
 			);
 			path = View;
@@ -91,7 +98,8 @@
 		3D208840239E3AB600FFF882 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3D20882E239E33BC00FFF882 /* ViewController.swift */,
+				3D208848239E5A8B00FFF882 /* HomeViewController.swift */,
+				3D20884F239E5FBE00FFF882 /* ListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -103,6 +111,15 @@
 				3D208844239E3BCD00FFF882 /* APIHandler.swift */,
 			);
 			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		3D20884A239E5E1500FFF882 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3D20884B239E5E4F00FFF882 /* ListViewCell.swift */,
+				3D20884C239E5E4F00FFF882 /* ListViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +180,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D20884E239E5E4F00FFF882 /* ListViewCell.xib in Resources */,
 				3D208837239E33C900FFF882 /* LaunchScreen.storyboard in Resources */,
 				3D208834239E33C900FFF882 /* Assets.xcassets in Resources */,
 				3D208832239E33BC00FFF882 /* Main.storyboard in Resources */,
@@ -176,11 +194,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D208849239E5A8B00FFF882 /* HomeViewController.swift in Sources */,
 				3D208843239E3B9F00FFF882 /* NetworkManager.swift in Sources */,
-				3D20882F239E33BC00FFF882 /* ViewController.swift in Sources */,
 				3D208847239E474C00FFF882 /* ProductDetails.swift in Sources */,
 				3D20882D239E33BC00FFF882 /* AppDelegate.swift in Sources */,
+				3D20884D239E5E4F00FFF882 /* ListViewCell.swift in Sources */,
 				3D208845239E3BCD00FFF882 /* APIHandler.swift in Sources */,
+				3D208850239E5FBE00FFF882 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
