@@ -12,7 +12,7 @@ class ListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var productDetails:ProductDetails?
+    var products:[Product]?
     
     var category_ids = [Int]()
     
@@ -25,17 +25,16 @@ class ListViewController: UIViewController {
 
 extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let productDetails = productDetails {
-            return productDetails.categories!.count
-        } else {
-            return 0
+        if let products = products {
+            return products.count
         }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListViewCell", for: indexPath) as! ListViewCell
         
-        cell.label.text = productDetails?.categories?.
+        cell.label.text = products?[indexPath.row].name
         
         return cell
     }
