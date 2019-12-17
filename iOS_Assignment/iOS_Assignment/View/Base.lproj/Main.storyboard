@@ -57,17 +57,13 @@
                                 </constraints>
                                 <state key="normal" title="Most Viewed Products"/>
                                 <connections>
-                                    <action selector="selectRankingTypeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xgc-v4-vBD"/>
+                                    <action selector="mostViewedProductsBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gHQ-zp-rt6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd6-Yc-Rn9">
                                 <rect key="frame" x="37.5" y="442" width="300" height="35"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.53804139839999998" blue="0.4845772143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Most Ordered Products"/>
-                                <connections>
-                                    <action selector="searchByRankingBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KEK-9Z-Chn"/>
-                                    <action selector="selectRankingTypeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Biv-sl-GzD"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View By Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewc-oW-ysl">
                                 <rect key="frame" x="16" y="79" width="167.5" height="24"/>
@@ -84,11 +80,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coC-8H-Mqp">
                                 <rect key="frame" x="37.5" y="497" width="300" height="35"/>
                                 <color key="backgroundColor" red="0.8980392157" green="0.53804139839999998" blue="0.4845772143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Most Ordered Products"/>
-                                <connections>
-                                    <action selector="searchByRankingBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiW-os-8NB"/>
-                                    <action selector="selectRankingTypeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vfc-SV-jHo"/>
-                                </connections>
+                                <state key="normal" title="Most Shared Products"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,7 +118,6 @@
                     <navigationItem key="navigationItem" id="AO9-EJ-Tam"/>
                     <connections>
                         <outlet property="selectCategoryBtn" destination="y23-c9-5hj" id="xSQ-pT-3KS"/>
-                        <outlet property="selectRankingTypeBtn" destination="Zvw-Nz-TjY" id="H40-lP-5Uy"/>
                         <outlet property="selectSubCategoryBtn" destination="nmv-0c-DBv" id="16c-CE-irW"/>
                     </connections>
                 </viewController>
@@ -166,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WjO-Ai-Iwt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1336.8" y="25.637181409295355"/>
+            <point key="canvasLocation" x="1753" y="27"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="whW-1T-gNx">

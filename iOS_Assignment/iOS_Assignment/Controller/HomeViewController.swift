@@ -140,6 +140,42 @@ class HomeViewController: UIViewController {
             self.navigationController?.pushViewController(listViewController, animated: true)
         }
     }
+    @IBAction func mostViewedProductsBtnWasPressed(_ sender: Any) {
+//        var productIds = [Int]()
+//        for productRanking in productDetails!.rankings! {
+//            if productRanking.ranking! == "Most Viewed Products" {
+//                for viewCount in productRanking.products! {
+//                    productIds.append(viewCount.id!)
+//                }
+//                break
+//            }
+//        }
+//        
+//        var filteredCategories = [ProductCategory]()
+//        for category in productDetails!.categories! {
+//            var filterdProducts = [Product]()
+//            for product in category.products! {
+//                if productIds.contains(product.id!) {
+//                    filterdProducts.append(product)
+//                }
+//            }
+//            print("HI")
+//            let newCategory = ProductCategory(id: category.id!, name: category.name!, prodcuts: filterdProducts, child_categories: category.child_categories!, tax: category.tax!)
+//            filteredCategories.append(newCategory)
+//        }
+//        
+//        print(filteredCategories)
+//        
+//        let listViewController = self.storyboard?.instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
+//        listViewController.productCategories = filteredCategories
+//        self.navigationController?.pushViewController(listViewController, animated: true)
+    }
+    @IBAction func mostOrderedProductsBtnWasPressed(_ sender: Any) {
+        
+    }
+    @IBAction func mostSharedProducts(_ sender: Any) {
+        
+    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {

@@ -19,6 +19,14 @@ struct ProductCategory: Decodable {
     let products:[Product]?
     let child_categories:[Int]?
     let tax:Tax?
+    
+    init(id:Int, name:String, prodcuts:[Product], child_categories:[Int], tax:Tax) {
+        self.id = id
+        self.name = name
+        self.products = prodcuts
+        self.child_categories = child_categories
+        self.tax = tax
+    }
 }
 
 struct Product: Decodable {

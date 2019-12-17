@@ -14,8 +14,6 @@ class ListViewController: UIViewController {
     
     var productCategories:[ProductCategory]?
     
-    var category_ids = [Int]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,5 +46,9 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.label.text = productCategories![indexPath.section].products![indexPath.row].name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //
     }
 }
