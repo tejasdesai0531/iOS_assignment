@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
     var categories = [Int]()
     var subCategories = [Int]()
     var categoryList = [Int:String]()
-    var products = [Product]()
+    var productCategories = [ProductCategory]()
     var options = [Int]()
     var selectedCategoryId:Int?
     var selectedSubCategoryId:Int?
@@ -46,26 +46,6 @@ class HomeViewController: UIViewController {
                 self.productDetails = try JSONDecoder().decode(ProductDetails.self, from: data)
                 
                 self.extractTopCategories()
-                
-//                let categories = self.productDetails!.categories
-//
-//                for category in categories! {
-//                    self.products.append(contentsOf: category.products!)
-//
-//                    if !category.child_categories!.isEmpty {
-//                        self.subCategories.append(contentsOf: category.child_categories!)
-//                    }
-//                    self.categories.append(category.id!)
-//                }
-//
-//                print(self.categories)
-//                print(self.subCategories)
-//
-//                DispatchQueue.main.async {
-//                    let listViewController = self.storyboard?.instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
-//                    listViewController.products = self.products
-//                    self.navigationController?.pushViewController(listViewController, animated: true)
-//                }
                 
             } catch let error as NSError {
                 print("Failed to load: \(error.localizedDescription)")
@@ -147,16 +127,16 @@ class HomeViewController: UIViewController {
         print(selectedSubCategoryId)
         print(child_categories)
         
-        products = [Product]()
+        productCategories = [ProductCategory]()
         for category in productDetails!.categories! {
             if child_categories.contains(category.id!) {
-                products.append(contentsOf: category.products!)
+                productCategories.append(category)
             }
         }
         
         DispatchQueue.main.async {
             let listViewController = self.storyboard?.instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
-            listViewController.products = self.products
+            listViewController.productCategories = self.productCategories
             self.navigationController?.pushViewController(listViewController, animated: true)
         }
     }
@@ -183,6 +163,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         selectedBtn.titleLabel?.text = categoryList[options[indexPath.row]]
         if selectedBtn.tag == 0 {
             selectedCategoryId = options[indexPath.row]
+            selectSubCategoryBtn.titleLabel?.text = "Select Sub-Category"
+            selectedSubCategoryId = nil
         } else if selectedBtn.tag == 1 {
             selectedSubCategoryId = options[indexPath.row]
         }

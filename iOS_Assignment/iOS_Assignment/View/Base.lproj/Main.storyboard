@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y23-c9-5hj">
-                                <rect key="frame" x="37.5" y="152" width="300" height="35"/>
+                                <rect key="frame" x="37.5" y="123" width="300" height="35"/>
                                 <color key="backgroundColor" red="0.89803921568627454" green="0.52853308130474563" blue="0.47670021094917947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="YTn-zE-m9R"/>
@@ -29,7 +29,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmv-0c-DBv">
-                                <rect key="frame" x="37.5" y="210" width="300" height="35"/>
+                                <rect key="frame" x="37.5" y="181" width="300" height="35"/>
                                 <color key="backgroundColor" red="0.89803921568627454" green="0.53804139839554355" blue="0.48457721430844841" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Select Sub-Category"/>
                                 <connections>
@@ -37,35 +37,96 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwD-Bp-FQJ">
-                                <rect key="frame" x="37.5" y="612" width="300" height="35"/>
-                                <color key="backgroundColor" red="0.8980392157" green="0.53804139839999998" blue="0.4845772143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="37.5" y="241" width="300" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="oeY-gf-aXO"/>
                                 </constraints>
-                                <state key="normal" title="Display Products"/>
+                                <state key="normal" title="Search by category">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="displayProductsBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fxl-6y-U7Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zvw-Nz-TjY">
+                                <rect key="frame" x="37.5" y="382" width="300" height="35"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.53804139839999998" blue="0.4845772143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ka2-no-JeK"/>
+                                </constraints>
+                                <state key="normal" title="Most Viewed Products"/>
+                                <connections>
+                                    <action selector="selectRankingTypeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xgc-v4-vBD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wd6-Yc-Rn9">
+                                <rect key="frame" x="37.5" y="442" width="300" height="35"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.53804139839999998" blue="0.4845772143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Most Ordered Products"/>
+                                <connections>
+                                    <action selector="searchByRankingBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KEK-9Z-Chn"/>
+                                    <action selector="selectRankingTypeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Biv-sl-GzD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View By Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ewc-oW-ysl">
+                                <rect key="frame" x="16" y="79" width="167.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View By Ranking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47k-4f-xDu">
+                                <rect key="frame" x="16" y="338" width="156.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coC-8H-Mqp">
+                                <rect key="frame" x="37.5" y="497" width="300" height="35"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.53804139839999998" blue="0.4845772143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Most Ordered Products"/>
+                                <connections>
+                                    <action selector="searchByRankingBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hiW-os-8NB"/>
+                                    <action selector="selectRankingTypeBtnWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vfc-SV-jHo"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ewc-oW-ysl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="0bg-cL-02c"/>
+                            <constraint firstItem="47k-4f-xDu" firstAttribute="top" secondItem="VwD-Bp-FQJ" secondAttribute="bottom" constant="62" id="2Yq-dO-gGq"/>
+                            <constraint firstItem="Ewc-oW-ysl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4lk-3t-Uhp"/>
                             <constraint firstItem="nmv-0c-DBv" firstAttribute="width" secondItem="y23-c9-5hj" secondAttribute="width" id="AhF-f4-uol"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VwD-Bp-FQJ" secondAttribute="bottom" constant="20" id="B5I-Pb-r5b"/>
-                            <constraint firstItem="VwD-Bp-FQJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="LQP-Bu-Ic5"/>
+                            <constraint firstItem="Zvw-Nz-TjY" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="B3S-0A-ODy"/>
+                            <constraint firstItem="47k-4f-xDu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="BuT-Qz-UCA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="47k-4f-xDu" secondAttribute="trailing" symbolic="YES" id="Fk0-tg-LH3"/>
+                            <constraint firstItem="Wd6-Yc-Rn9" firstAttribute="height" secondItem="Zvw-Nz-TjY" secondAttribute="height" id="KjP-bC-UwF"/>
+                            <constraint firstItem="Zvw-Nz-TjY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MxJ-OH-dN5"/>
                             <constraint firstItem="nmv-0c-DBv" firstAttribute="top" secondItem="y23-c9-5hj" secondAttribute="bottom" constant="23" id="NBC-b5-0Lh"/>
                             <constraint firstItem="nmv-0c-DBv" firstAttribute="centerX" secondItem="y23-c9-5hj" secondAttribute="centerX" id="NhF-F8-4m5"/>
                             <constraint firstItem="y23-c9-5hj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="P2K-oG-G20"/>
-                            <constraint firstItem="y23-c9-5hj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="88" id="clb-0g-nVT"/>
+                            <constraint firstItem="coC-8H-Mqp" firstAttribute="centerX" secondItem="Wd6-Yc-Rn9" secondAttribute="centerX" id="P80-qN-slx"/>
+                            <constraint firstItem="VwD-Bp-FQJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SOf-MV-1zd"/>
+                            <constraint firstItem="VwD-Bp-FQJ" firstAttribute="top" secondItem="nmv-0c-DBv" secondAttribute="bottom" constant="25" id="TqZ-ey-2qK"/>
+                            <constraint firstItem="coC-8H-Mqp" firstAttribute="height" secondItem="Wd6-Yc-Rn9" secondAttribute="height" id="Uoa-Ky-bL6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ewc-oW-ysl" secondAttribute="trailing" symbolic="YES" id="X6M-jn-qxC"/>
                             <constraint firstItem="VwD-Bp-FQJ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="fcR-I0-ehz"/>
+                            <constraint firstItem="Wd6-Yc-Rn9" firstAttribute="width" secondItem="Zvw-Nz-TjY" secondAttribute="width" id="nAw-SI-hgi"/>
                             <constraint firstItem="y23-c9-5hj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ocD-ZU-C3s"/>
                             <constraint firstItem="nmv-0c-DBv" firstAttribute="height" secondItem="y23-c9-5hj" secondAttribute="height" id="uuv-sl-EST"/>
+                            <constraint firstItem="Wd6-Yc-Rn9" firstAttribute="centerX" secondItem="Zvw-Nz-TjY" secondAttribute="centerX" id="xRt-XT-AY0"/>
+                            <constraint firstItem="coC-8H-Mqp" firstAttribute="top" secondItem="Wd6-Yc-Rn9" secondAttribute="bottom" constant="20" id="xst-c2-9sK"/>
+                            <constraint firstItem="coC-8H-Mqp" firstAttribute="width" secondItem="Wd6-Yc-Rn9" secondAttribute="width" id="yUU-VT-ec2"/>
+                            <constraint firstItem="Zvw-Nz-TjY" firstAttribute="top" secondItem="47k-4f-xDu" secondAttribute="bottom" constant="20" id="ypg-8f-oIS"/>
+                            <constraint firstItem="Wd6-Yc-Rn9" firstAttribute="top" secondItem="Zvw-Nz-TjY" secondAttribute="bottom" constant="25" id="ysP-Th-LKW"/>
+                            <constraint firstItem="y23-c9-5hj" firstAttribute="top" secondItem="Ewc-oW-ysl" secondAttribute="bottom" constant="20" id="z2m-Fo-zNh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="AO9-EJ-Tam"/>
                     <connections>
                         <outlet property="selectCategoryBtn" destination="y23-c9-5hj" id="xSQ-pT-3KS"/>
+                        <outlet property="selectRankingTypeBtn" destination="Zvw-Nz-TjY" id="H40-lP-5Uy"/>
                         <outlet property="selectSubCategoryBtn" destination="nmv-0c-DBv" id="16c-CE-irW"/>
                     </connections>
                 </viewController>
